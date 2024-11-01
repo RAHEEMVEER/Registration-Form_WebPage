@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("image/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  max-height: auto;
+}
+
+form {
+  width: 600px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  border-radius: 30px;
+  padding: 20px;
+  animation: colors 6s ease-in-out infinite;
+}
+@keyframes colors {
+  0% {
+    box-shadow: 0 0 1rem rgb(37, 37, 238);
+  }
+  25% {
+    box-shadow: 0 0 1rem orange;
+  }
+  50% {
+    box-shadow: 0 0 1rem red;
+  }
+  75% {
+    box-shadow: 0 0 1rem aqua;
+  }
+  100% {
+    box-shadow: 0 0 1rem rgb(37, 37, 238);
+    transform: 10s;
+  }
+}
+
+#main-heading {
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  color: aquamarine;
+}
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  gap: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 50px;
+  width: 48%;
+}
+.icon-div i {
+  color: aqua;
+  font-size: 1.3vw;
+}
+.box .input-div {
+  position: relative;
+  height: 80%;
+  width: 87%;
+}
+
+.input-div input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid aqua;
+}
+input[type="text"],
+[type="password"],
+[type="email"],
+[type="number"] {
+  color: #fff;
+  font-size: 1.4vw;
+}
+label {
+  position: absolute;
+  width: 240px;
+  top: 40%;
+  left: 0;
+  font-size: 1.2vw;
+  transition: 0.5s;
+  cursor: pointer;
+  color: #fff;
+}
+.activeLabel {
+  top: -30%;
+  font-size: 1vw;
+  cursor: pointer;
+}
+.container-4 {
+  margin-top: -30px;
+  width: 100%;
+}
+.container-4 h4 {
+  font-size: 1.6vw;
+  text-align: center;
+  color: aqua;
+}
+.gender-input {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 20px;
+}
+.gender-input i {
+  color: aqua;
+  font-size: 1.6vw;
+}
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+.btn {
+  width: 110px;
+  height: 40px;
+  background: transparent;
+  border: 3px solid aqua;
+  box-shadow: 0 0 1rem aqua;
+  color: #fff;
+  font-size: 1.4vw;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: aqua;
+    transition: 0.3s all ease-in-out;
+    border-radius: 5px;
+    z-index: -1;
+  }
+  &:hover::before {
+    height: 100%;
+  }
+  &:hover {
+    color: black;
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 1178px) {
+  label {
+    font-size: 1.6vw;
+  }
+  input[type="text"],
+  [type="password"],
+  [type="email"],
+  [type="number"] {
+    font-size: 1.6vw;
+  }
+  .activeLabel {
+    font-size: 1.6vw;
+  }
+  .icon-div i {
+    font-size: 1.6vw;
+  }
+  .btn {
+    font-size: 1.8vw;
+  }
+}
+@media screen and (max-width: 1048px) {
+  label {
+    font-size: 2vw;
+  }
+  input[type="text"],
+  [type="password"],
+  [type="email"],
+  [type="number"] {
+    font-size: 2vw;
+  }
+  .activeLabel {
+    font-size: 1.6vw;
+  }
+  .icon-div i {
+    font-size: 2vw;
+  }
+  .container-4 h4 {
+    font-size: 2.1vw;
+  }
+  .gender-input i {
+    font-size: 1.8vw;
+  }
+}
+@media screen and (max-width: 920px) {
+  .btn {
+    font-size: 2.4vw;
+  }
+}
+@media screen and (max-width: 780px) {
+  label {
+    font-size: 2.6vw;
+  }
+  .icon-div i {
+    font-size: 2.6vw;
+  }
+  input[type="text"],
+  [type="password"],
+  [type="email"],
+  [type="number"] {
+    font-size: 2.1vw;
+  }
+  .container-4 h4 {
+    font-size: 2.8vw;
+  }
+  .gender-input i {
+    font-size: 2.6vw;
+  }
+  .btn {
+    font-size: 2.6vw;
+  }
+}
+@media screen and (max-width: 654px) {
+  body {
+    padding: 2rem;
+  }
+  .btn {
+    font-size: 2.9vw;
+  }
+}
+@media screen and (max-width: 602px) {
+  form {
+    height: auto;
+  }
+  .box {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .container-4 {
+    margin-top: 10px;
+  }
+  .container-4 h4 {
+    font-size: 4vw;
+  }
+  .gender-input i {
+    font-size: 3.6vw;
+  }
+  .button-container {
+    margin-top: 10px;
+  }
+  .btn {
+    font-size: 3.5vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  label {
+    font-size: 4vw;
+  }
+  .icon-div i {
+    font-size: 4vw;
+  }
+  input[type="text"],
+  [type="password"],
+  [type="email"],
+  [type="number"] {
+    font-size: 4vw;
+  }
+  .activeLabel {
+    font-size: 2.4vw;
+  }
+  .btn {
+    font-size: 3.8vw;
+  }
+}
+@media screen and (max-width: 390px) {
+  label {
+    font-size: 4.5vw;
+  }
+  .icon-div i {
+    font-size: 4.5vw;
+  }
+  input[type="text"],
+  [type="password"],
+  [type="email"],
+  [type="number"] {
+    font-size: 4.5vw;
+  }
+  .activeLabel {
+    font-size: 3vw;
+  }
+  .container-4 h4 {
+    font-size: 6vw;
+  }
+  .gender-input i {
+    font-size: 5vw;
+  }
+  .btn {
+    font-size: 4.6vw;
+  }
+}

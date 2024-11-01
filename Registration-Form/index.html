@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <!-- box icon website link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="registrationForm" autocomplete="off">
+      <h1 id="main-heading">Registeration</h1>
+      <div class="main-container">
+        <div class="box">
+          <div class="icon-div">
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-div">
+            <input type="text" id="firstName" required class="input" />
+            <label for="firstName" class="label">First Name</label>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="icon-div">
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-div">
+            <input type="text" id="lastName" required class="input" />
+            <label for="lastName" class="label">Last Name</label>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="icon-div">
+            <i class="bx bxs-envelope"></i>
+          </div>
+          <div class="input-div">
+            <input
+              type="email"
+              id="email"
+              required
+              autocomplete="off"
+              class="input"
+            />
+            <label for="email" class="label">Email</label>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="icon-div">
+            <i class="bx bxs-phone"></i>
+          </div>
+          <div class="input-div">
+            <input type="number" id="phone" required class="input" />
+            <label for="phone" class="label">Phone</label>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="icon-div">
+            <i class="bx bxs-lock"></i>
+          </div>
+          <div class="input-div">
+            <input
+              type="password"
+              id="password"
+              required
+              autocomplete="new-password"
+              class="input"
+            />
+            <label for="password" class="label">Password</label>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="icon-div">
+            <i class="bx bxs-lock"></i>
+          </div>
+          <div class="input-div">
+            <input
+              type="password"
+              id="password1"
+              required
+              autocomplete="new-password"
+              class="input"
+            />
+            <label for="password1" class="label">Confirm Password</label>
+          </div>
+        </div>
+
+        <div class="container-4">
+          <h4>Gender</h4>
+
+          <div class="gender-input">
+            <div class="box-1">
+              <i class="bx bx-male-sign" id="maleIcon"></i>
+              <input
+                type="radio"
+                value="male"
+                name="gender"
+                id="male"
+                class="gender"
+                required
+              />
+            </div>
+
+            <div class="box-2">
+              <i class="bx bx-female-sign" id="femaleIcon"></i>
+              <input
+                type="radio"
+                value="female"
+                name="gender"
+                id="female"
+                class="gender"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button type="submit" class="btn">Register</button>
+      </div>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
+</html>

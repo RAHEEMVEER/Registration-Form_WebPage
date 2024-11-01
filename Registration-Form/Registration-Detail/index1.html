@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Detail</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <h1>Registration Details</h1>
+    <div class="main-container">
+      <div class="container-1">
+        <div class="box">
+          <p>FirstName: <span id="displayFirstName"></span></p>
+        </div>
+        <div class="box">
+          <p>LastName: <span id="displayLastName"></span></p>
+        </div>
+        <div class="box">
+          <p>Email: <span id="displayEmail"></span></p>
+        </div>
+        <div class="box">
+          <p>Phone: <span id="displayPhone"></span></p>
+        </div>
+        <div class="box">
+          <p>Password: <span id="displayPassword"></span></p>
+        </div>
+        <div class="box">
+          <p>Gender: <span id="displayGender"></span></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("displayFirstName").textContent =
+        localStorage.getItem("firstName");
+      document.getElementById("displayLastName").textContent =
+        localStorage.getItem("lastName");
+      document.getElementById("displayEmail").textContent =
+        localStorage.getItem("email");
+      document.getElementById("displayPhone").textContent =
+        localStorage.getItem("phone");
+      document.getElementById("displayPassword").textContent =
+        localStorage.getItem("password");
+      document.getElementById("displayGender").textContent =
+        localStorage.getItem("gender");
+    </script>
+  </body>
+</html>
